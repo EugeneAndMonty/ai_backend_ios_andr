@@ -1,3 +1,4 @@
 from django.db import models
 
-# Create your models here.
+class For_test(models.Model):
+    is_true = models.BooleanField()
