@@ -1,0 +1,12 @@
+version: '3.10'
+
+services:
+  app:
+    build: .
+    image: app:djng
+    container_name: djng_container
+    command: python manage.py runserver
+    ports:
+      - '8000:8000'
+
+    

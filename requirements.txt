@@ -5,8 +5,8 @@ charset-normalizer==3.1.0
 colorama==0.4.6
 Django==4.2.2
 django-cors-headers==4.1.0
+django-environ==0.10.0
 djangorestframework==3.14.0
-environ==1.0
 filelock==3.12.2
 future==0.18.3
 gevent==22.10.2
