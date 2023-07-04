@@ -15,7 +15,7 @@ def for_test(request):
         return Response({'code': f'request was rejected {status.HTTP_400_BAD_REQUEST}'})
     
 @api_view(['POST'])
-def for_freinds(request):
+def for_friends(request):
     try: 
         query = For_friends(name=request.data)
         query.save()
