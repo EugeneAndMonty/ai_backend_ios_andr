@@ -1,5 +1,9 @@
 from django.db import models
 
-class For_test(models.Model):
-    is_true = models.BooleanField()
-    new_column = models.CharField(max_length=100, default=None, null=True)
+class ForTest(models.Model):
+    is_true = models.BooleanField(default=True)
+    message = models.CharField(max_length=100, default='no message')
+
+    class Meta:
+        managed = True
+        db_table = 'for_test'
