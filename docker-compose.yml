@@ -1,22 +1,18 @@
-# version: '3.10'
-
-# services:
-#   app:
-#     build: .
-#     image: app:djng
-#     container_name: djng_container
-#     command: python3 manage.py runserver 0.0.0.0:8000
-#     ports:
-#       - '8000:8000'
-
 version: '3.10'
 
 services:
-  app:
+  django_gunicorn:
     build: .
-    image: app:djng
-    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    image: django_gunicorn
     volumes:
       - .:/code
     ports:
-      - "8000:8000"
+      - "80:80"
+  # nginx:
+  #   build: ./nginx
+  #   volumes:
+  #   - .:/code
+  #   ports:
+  #   - "80:80"
+  #   depends_on:
+  #     - django_gunicorn

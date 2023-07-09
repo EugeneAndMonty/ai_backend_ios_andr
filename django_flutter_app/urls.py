@@ -5,4 +5,5 @@ from django_flutter_app import views
 
 urlpatterns = [
     path('for_test', views.for_test),
+    path('', views.hello)
 ]
