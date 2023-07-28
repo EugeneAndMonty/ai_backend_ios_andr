@@ -10,8 +10,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: deploy
-      - uses: actions/checkout@v2
+      - name: deploy app
+      - uses: appleboy/ssh-action@v0.1.2
         with:
           host: ${{secrets.SSH_HOST}}
           key: ${{secrets.SSH}}
