@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'fake-backend.chickenkiller.com', '143.244.154.153']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'fake-backend.chickenkiller.com', '143.244.154.153', 'airesearchfund.com']
 
 CORS_ORIGIN_ALLOW_ALL = True
 

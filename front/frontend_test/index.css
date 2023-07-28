@@ -1,0 +1,12 @@
+#green {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(126, 202, 126);
+}
+
+#red {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(165, 48, 48);
+    cursor: grab;
+}
