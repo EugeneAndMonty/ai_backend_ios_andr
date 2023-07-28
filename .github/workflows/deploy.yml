@@ -10,16 +10,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      -name: deploy
-      uses: actions/checkout@v2
-      with:
-      host: ${{secrets.SSH_HOST}}
-      key: ${{secrets.SSH}}
-      username: ${{secrets.SSH_USERNAME}}
-      
-      script: |
-        mkdir test
-        cd test
+      - name: deploy
+      - uses: actions/checkout@v2
+        with:
+          host: ${{secrets.SSH_HOST}}
+          key: ${{secrets.SSH}}
+          username: ${{secrets.SSH_USERNAME}}
+
+          script: |
+            mkdir test
+            cd test
 #   build:
 
 #     runs-on: ubuntu-latest
