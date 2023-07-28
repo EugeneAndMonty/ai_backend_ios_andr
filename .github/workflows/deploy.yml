@@ -10,7 +10,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: eugeneandmonty/ai_backend_ios_andr@v1
         name: deploy app
         with:
           host: ${{secrets.SSH_HOST}}
