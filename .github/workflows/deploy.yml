@@ -11,15 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: appleboy/ssh-action@v0.1.2
-      - name: deploy app
+        name: deploy app
         with:
           host: ${{secrets.SSH_HOST}}
           key: ${{secrets.SSH}}
           username: ${{secrets.SSH_USERNAME}}
-
-          script: |
-            mkdir test
-            cd test
+          
+          name: build app
+          run: |
+            mkdir Test
+        
+#           script: |
+#             mkdir test
+#             cd test
 #   build:
 
 #     runs-on: ubuntu-latest
