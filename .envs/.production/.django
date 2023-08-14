@@ -1,0 +1,5 @@
+# General
+SECRET_KEY='django-insecure-gxlg$i1+4e1qazb0kvc+%53a7zolyk(o-)w5hf8on(k0wve6!)'
+# Gunicorn
+WEB_CONCURRENCY=4
+

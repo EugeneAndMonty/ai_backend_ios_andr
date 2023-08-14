@@ -1,0 +1,44 @@
+version: '3'
+
+volumes:
+  test_traefik: {}
+  test_django_media: {}
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/test/django/Dockerfile
+    image: fake_backend_test
+    container_name: fake_backend_test
+    volumes:
+      - .:/app:z
+    env_file:
+      - ./.envs/.test/.django
+      - ./.envs/.test/.mysql
+    ports:
+      - '8000:8000'
+    command: /start
+
+  traefik:
+    build:
+      context: .
+      dockerfile: ./compose/test/traefik/Dockerfile
+    image: fake_backend_test_traefik
+    depends_on:
+      - django
+    volumes:
+      - test_traefik:/etc/traefik/acme
+    ports:
+      - '0.0.0.0:80:80'
+      - '0.0.0.0:443:443'
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./compose/test/nginx/Dockerfile
+    image: fake_backend_test_nginx
+    depends_on:
+      - django
+    volumes:
+      - test_django_media:/usr/share/nginx/media:ro

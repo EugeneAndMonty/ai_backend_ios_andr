@@ -1,0 +1,6 @@
+NAME='dj-azure-cloud'
+DATABASEUSER='eugeneandmonty'
+PASSWORD='131366Aa'
+HOST='mysql-django-flutter-app.mysql.database.azure.com'
+PORT='3306'
+
